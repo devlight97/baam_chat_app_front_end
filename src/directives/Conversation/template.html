@@ -1,0 +1,24 @@
+<div class="col-sm-8 conversation">
+    <heading-chat-box receiver="receiver"></heading-chat-box>
+
+    <div class="row message" id="conversation">
+        <div class="row message-previous">
+            <div class="col-sm-12 previous">
+                <a onclick="previous(this)" id="ankitjain28" name="20">
+                    Show Previous Message!
+                </a>
+            </div>
+        </div>
+
+        <message-row
+            ng-repeat="message in listMessage | orderBy : message.createDate"
+            test-value="test"
+            is-receiver="userId !== message.userId"
+            message="message"
+            receiver="receiver"
+        ></message-row>
+        
+    </div>
+
+    <chatting-input ng-show="chatBoxCurrent !== null" event-name="eventName"></chatting-input>
+</div>

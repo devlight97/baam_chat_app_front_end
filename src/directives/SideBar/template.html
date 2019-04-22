@@ -1,0 +1,32 @@
+<div class="col-sm-4 side">
+    <div class="side-one" ng-show="isShowChatBoxForm === true">
+        <heading-side-bar open-add-friend-form="openAddFriendForm()"></heading-side-bar>
+
+        <search-box is-search-chat-box="true" event-name="eventName"></search-box>
+
+        <!-- list chat box -->
+        <div class="row sideBar">
+            <chat-box-selection
+                ng-repeat="chatBox in listChatBoxCurrent"
+                chat-box="chatBox"
+            ></chat-box-selection>
+        </div>
+    </div>
+
+    <div class="side-two" ng-style="styleAddFriendForm">
+        <heading-add-friend-form close-add-friend-form="closeAddFriendForm()"></heading-add-friend-form>
+
+        <search-box is-search-user="true" event-name="eventName"></search-box>
+
+        <!-- list user -->
+        <div class="row compose-sideBar">
+            <chat-box-selection
+                img="https://bootdey.com/img/Content/avatar/avatar1.png"
+                ng-repeat="user in listUserCurrent"
+                user="user"
+                event-name="eventName"
+                close-add-friend-form="closeAddFriendForm()"
+            ></chat-box-selection>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="row message-body">
+    <div ng-show="{{ $ctrl.isReceiver }}" class="col-sm-12 message-main-receiver">
+
+        <img ng-style="style.leftMessage" class="img-circle" src="{{ $ctrl.receiver.img }}" />
+        <div class="receiver">
+            <md-tooltip md-direction="right">{{ $ctrl.message.createDate }}</md-tooltip>
+            <div class="message-text">
+                {{ $ctrl.message.content }}
+            </div>
+        </div>
+    </div>
+    <div ng-hide="{{ $ctrl.isReceiver }}" class="col-sm-12 message-main-sender">
+        <img ng-style="style.rightMessage" class="img-circle" src="{{ userImg }}" />
+        <div class="sender">
+            <md-tooltip md-direction="left">{{ $ctrl.message.createDate }}</md-tooltip>
+            <div class="message-text">
+                {{ $ctrl.message.content }}
+            </div>
+            <span class="message-time pull-right"></span>
+        </div>
+    </div>
+</div>

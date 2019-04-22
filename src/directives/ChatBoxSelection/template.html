@@ -1,0 +1,29 @@
+<div class="row sideBar-body" ng-click="clickChatBox()" ng-style="style">
+    <div class="col-sm-3 col-xs-3 sideBar-avatar">
+        <div class="avatar-icon">
+            <img src="{{ infoBox.img }}">
+        </div>
+    </div>
+    <div class="col-sm-9 col-xs-9 sideBar-main">
+        <div class="row">
+            <div class="col-sm-8 col-xs-8 sideBar-name">
+                <span class="name-meta">{{ infoBox.name }}
+                </span>
+                <br>
+                <div ng-show="isShowNotifyNewMessage === true" class="notify-new-message">
+                    <span class="number-notify-new-message">
+                        {{ notSeen > 9 ? '9+' : notSeen }}
+                    </span>
+                </div>
+                <i ng-show="infoBox.lastMessage !== undefined"
+                    class="last-message">{{ infoBox.lastMessage.content }}</i>
+                <i ng-hide="infoBox.lastMessage !== undefined" style="color: green;" class="last-message">Trò truyện
+                    ngay !!</i>
+            </div>
+            <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                <span class="time-meta pull-right">{{ infoBox.lastDateMessage  }}</span>
+                <span class="time-meta pull-right">{{ infoBox.lastTimeMessage }}</span>
+            </div>
+        </div>
+    </div>
+</div>

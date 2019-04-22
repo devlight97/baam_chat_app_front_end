@@ -1,0 +1,14 @@
+.ng-scope {
+    height: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.test {
+    height: 100%;
+    border: 1px solid black;
+    /* background-color: rebeccapurple; */
+    padding: 0;
+}

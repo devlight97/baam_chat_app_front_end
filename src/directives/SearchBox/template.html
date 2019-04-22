@@ -1,0 +1,23 @@
+<div class="row searchBox" search-text="{{ searchTxt }}">
+    <div class="col-sm-12 searchBox-inner">
+        <div class="container">
+            <div class="form-group has-feedback row" style="margin: 0;">
+                <input
+                    ng-model="searchTxt"
+                    id="searchText"
+                    type="text"
+                    class="form-control col-sm-10"
+                    name="searchText"
+                    placeholder="Search"
+                    ng-style="styleInput"
+                >
+                <span
+                    ng-show="searchTxt !== ''"
+                    id="remove-button"
+                    class="fas fa-backspace col-sm-1 remove-search-text-btn"
+                    ng-click="removeText()"
+                ></span>
+            </div>
+        </div>
+    </div>
+</div>
